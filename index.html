@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <!--
+    <script src="./components/Rotation.js"></script>
+  -->  
+
+  </head>
+
+  <body>
+    <a-scene background="color:#026F90">
+
+      <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
+
+      <!--Asset Management-->
+      <a-assets timeout="10000">        
+        <a-assets-item
+          id="Terrain"
+          src="./assets/models/terrain/scene.gltf"
+        ></a-assets-item>
+
+        <a-assets-item                
+          id="Plane"
+          src="./assets/models/plane/scene.gltf"
+        ></a-assets-item>
+        
+      </a-assets>
+
+      <!-- Terrain  -->
+      <a-entity
+        id="Terrain"
+        glft-model="#Terrain"
+        position="0 -10 0"
+        scale="0.3 0.3 0.3"
+      ></a-entity>
+
+      <a-entity
+        id="Plane"
+        glft-model="#Plane"
+        position="0 0 0"
+        scale="0.3 0.3 0.3"
+      ></a-entity>
+
+      
+    </a-scene>
+  </body>
+</html>
