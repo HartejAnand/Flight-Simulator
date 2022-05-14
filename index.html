@@ -5,9 +5,7 @@
 
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
-  <!--
     <script src="./components/Rotation.js"></script>
-  -->  
 
   </head>
 
@@ -36,6 +34,8 @@
         glft-model="#Terrain"
         position="0 -10 0"
         scale="0.3 0.3 0.3"
+        animation="property: position; to: 0 0 1000;easing:linear; loop: true; dur: 150000"
+        terrain-rotation-reader
       ></a-entity>
 
       <a-entity
@@ -43,6 +43,8 @@
         glft-model="#Plane"
         position="0 0 0"
         scale="0.3 0.3 0.3"
+        rotation="0 90 0"
+        plane-rotation-reader  
       ></a-entity>
 
       
