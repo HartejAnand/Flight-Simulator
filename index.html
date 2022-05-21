@@ -6,6 +6,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 
     <script src="./components/Rotation.js"></script>
+    <script src="./components/target.js"></script>
 
   </head>
 
@@ -25,7 +26,6 @@
           id="Plane"
           src="./assets/models/plane/scene.gltf"
         ></a-assets-item>
-        
       </a-assets>
 
       <!-- Terrain  -->
@@ -36,6 +36,7 @@
         scale="0.3 0.3 0.3"
         animation="property: position; to: 0 0 1000;easing:linear; loop: true; dur: 150000"
         terrain-rotation-reader
+        target-ring
       ></a-entity>
 
       <a-entity
