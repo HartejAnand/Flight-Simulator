@@ -10,9 +10,8 @@ AFRAME.registerComponent("target-ring", {
            var posZ=(Math.random()*3000+(-1000));
            var position={x:posX, y:posY, z:posZ};
 
-           this.createRings(id, position);
+           this.creatingRings(id, position);
         }
-        
     },
     creatingRings:function(id, position){
         var terrainEl= document.querySelector("#Terrain");
@@ -25,7 +24,7 @@ AFRAME.registerComponent("target-ring", {
         ringEl.setAttribute("material", "color", "rgb(255,255,0)");
         ringEl.setAttribute("geometry", {primitive: "torus", radius:8});
         terrainEl.appendChild(ringEl);
-    }
+    },
 });
 
 //A component with one property value is a single property component
